@@ -25,6 +25,9 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
         <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#"  data-toggle="modal" data-target="#additem" role="button">Add Item <i class="fa fa-plus"></i></a>
+          </li>
           <li class="dropdown">
             <a href="#" class="view-cart" data-toggle="dropdown" role="button">Shopping Cart <i class="fa fa-shopping-cart"></i></a>
           </li>
@@ -32,6 +35,52 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
+
+  <div class="modal fade" id="additem" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModal3Label">Add Item</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="input-group">
+            <span class="input-group-addon" >Product name:</span>
+            <input id="product-name" type="text" class="form-control" placeholder="enter name" aria-describedby="basic-addon1">
+          </div>
+
+          <br>
+
+          <div class="input-group">
+            <span class="input-group-addon" >price:</span>
+            <input id="product-price" type="text" class="form-control" placeholder="enter price" aria-describedby="basic-addon1">
+          </div>
+
+          <br>
+
+          <div class="input-group">
+            <span class="glyphicon glyphicon-upload input-group-addon" aria-hidden="true"> Upload Image of product:</span>
+            <input class= "form-control" type="file" title ="" id="img-file">
+          </div>
+
+
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="save">Save changes</button>
+          </div>
+
+        </div>
+
+
+      </div>
+
+      </div>
+    </div>
+  </div>
 
   <div class="page-header">
     <h1>SHOPPING CART</h1>
@@ -41,7 +90,7 @@
     <div class="shopping-cart">
       <p class="cart-title">Items in Cart</p>
       <div class="cart-list"></div>
-      <p>Total: $<span class="total">0</span></p>
+      <p id="total">Total: $<span class="total">0</span></p>
       <button type="button" class="btn clear-cart">Clear Cart</button>
     </div>
 
@@ -141,8 +190,8 @@
             </div>
             <div class="card-inner">
               <img src="http://ecx.images-amazon.com/images/I/41NZO5GovmL.jpg" class="proimage">
-            </div>
-          </div>
+        </div>
+      </div>
         </div>
       </div>
     </div>
